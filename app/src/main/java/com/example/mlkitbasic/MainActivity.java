@@ -126,10 +126,12 @@ import java.util.List;
                                                                 float smileProb = face.getSmilingProbability();
 
                                                                 myRectPaint.setStyle(Paint.Style.FILL);
-                                                                myRectPaint.setTextSize(58);
+                                                                myRectPaint.setTextSize(48);
                                                                 myRectPaint.setColor(Color.GREEN);
 
-                                                                tempCanvas.drawText("Smile Percentage :- " + (smileProb*100),rect.left,rect.left,myRectPaint);
+                                                                String per = String.format("%.2f",(smileProb * 100));
+
+                                                                tempCanvas.drawText("Smile :- " + per + " %",rect.left - 20,rect.top + 30,myRectPaint);
 
                                                             }
 
